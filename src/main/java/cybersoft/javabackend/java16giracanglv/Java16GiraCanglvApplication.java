@@ -8,7 +8,6 @@ public class Java16GiraCanglvApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Java16GiraCanglvApplication.class, args);
-
 	}
 
 }
