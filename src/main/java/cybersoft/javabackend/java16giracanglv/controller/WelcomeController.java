@@ -5,7 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WelcomeController {
-    @GetMapping("/welcome")
+    @GetMapping(value = {"","/welcome"})
+
+
     public String welcome() {
         return "Welcome to Java Backendss";
     }
