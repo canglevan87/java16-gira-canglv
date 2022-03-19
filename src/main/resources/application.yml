@@ -10,6 +10,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/gira
     username: postgres
     password: admin
+  jpa:
+    hibernate:
+      ddl-auto: 'update'
+    generate-ddl: true
+    show-sql: true
 
   flyway:
     enabled: false
