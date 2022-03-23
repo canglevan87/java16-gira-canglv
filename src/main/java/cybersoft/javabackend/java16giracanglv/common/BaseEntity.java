@@ -1,6 +1,7 @@
 package cybersoft.javabackend.java16giracanglv.common;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import net.bytebuddy.asm.Advice;
 import org.apache.tomcat.jni.Local;
@@ -20,6 +21,7 @@ import java.util.UUID;
 @MappedSuperclass
 @Data
 @SuperBuilder
+@NoArgsConstructor
 public abstract class BaseEntity implements Serializable {
     @Id
     @Type(type = "uuid-char")

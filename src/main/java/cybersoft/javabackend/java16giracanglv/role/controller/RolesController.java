@@ -1,4 +1,4 @@
-package cybersoft.javabackend.java16giracanglv.controller;
+package cybersoft.javabackend.java16giracanglv.role.controller;
 
 import cybersoft.javabackend.java16giracanglv.role.model.GiraRole;
 import cybersoft.javabackend.java16giracanglv.role.service.GiraRoleDTO;

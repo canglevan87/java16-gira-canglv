@@ -12,11 +12,11 @@ spring:
     password: admin
   jpa:
     hibernate:
-      ddl-auto: 'update'
-    generate-ddl: true
+
+    generate-ddl: false
     show-sql: true
 
   flyway:
-    enabled: false
+    enabled: true
     driver-class-name: org.postgresql.Driver
 

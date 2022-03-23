@@ -2,6 +2,9 @@ package cybersoft.javabackend.java16giracanglv.role.model;
 
 import cybersoft.javabackend.java16giracanglv.common.BaseEntity;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.ManyToAny;
 import org.hibernate.annotations.Type;
@@ -15,8 +18,10 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "GIRA_GROUP")
-@Data
+@Getter
+@Setter
 @SuperBuilder
+@NoArgsConstructor
 public class GiraGroup extends BaseEntity {
 
     @Size(min = 5, max = 10)
@@ -30,5 +35,15 @@ public class GiraGroup extends BaseEntity {
             inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
      private  Set<GiraRole> roles = new LinkedHashSet<>();
 
-
+    public void addRole (GiraRole role){
+        roles.add(role);
+        role.getGroups().add(this);
+    }
+    public void removeRole(GiraRole role){
+        roles.remove(role);
+        role.getGroups().remove(this);
+    }
+    public void removeAllRole(){
+        roles.clear();
+    }
 }

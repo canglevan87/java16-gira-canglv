@@ -16,8 +16,9 @@ import java.util.UUID;
 @Table(name="GIRA_ROLE")
 @Getter
 @Setter
-@Data
+
 @SuperBuilder
+@NoArgsConstructor
 public class GiraRole extends BaseEntity {
 
     @Size(min=5,max=5)
