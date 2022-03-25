@@ -4,6 +4,7 @@ import cybersoft.javabackend.java16giracanglv.role.dto.GiraGroupDTO;
 import cybersoft.javabackend.java16giracanglv.role.dto.GiraGroupRoleDTO;
 import cybersoft.javabackend.java16giracanglv.role.service.GiraGroupService;
 import cybersoft.javabackend.java16giracanglv.util.ResponseHelper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
+@Slf4j
 @RestController
 @RequestMapping("/group")
 public class GroupController {
@@ -22,6 +24,7 @@ public class GroupController {
 
     @GetMapping
     public Object findGroup(){
+        log.info("findGroup");
         List<GiraGroupDTO> groupDTOS = giraGroupService.findAll();
         return ResponseHelper.getResponeseEntity(groupDTOS, HttpStatus.OK);
     }

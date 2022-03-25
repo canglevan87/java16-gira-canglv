@@ -12,8 +12,8 @@ spring:
     password: admin
   jpa:
     hibernate:
-
-    generate-ddl: false
+    auto-ddl: update
+    generate-ddl: true
     show-sql: true
 
   flyway:
