@@ -35,6 +35,12 @@ public class GiraGroup extends BaseEntity {
             inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
      private  Set<GiraRole> roles = new LinkedHashSet<>();
 
+    @ManyToMany(cascade ={CascadeType.MERGE,CascadeType.PERSIST})
+    @JoinTable(name = "GIRA_GROUP_USER",
+            joinColumns = @JoinColumn(name = "GROUP_ID"),
+            inverseJoinColumns = @JoinColumn(name = "USER_ID"))
+    private  Set<GiraUser> users = new LinkedHashSet<>();
+
     public void addRole (GiraRole role){
         roles.add(role);
         role.getGroups().add(this);

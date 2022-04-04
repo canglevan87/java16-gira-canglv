@@ -8,11 +8,11 @@ import java.util.UUID;
 @Data
 public class GiraGroupDTO {
     private UUID id;
-    @Size(min = 5, max = 30, message = "Groupcode must be 5 characters")
+    @Size(min = 5, max = 30, message = "{group.code.size}")
 
     private String code;
 
-    @NotBlank(message = "Description is mandatory")
+    @NotBlank(message = "{group.code.notblank}")
 
 
     private String description;
