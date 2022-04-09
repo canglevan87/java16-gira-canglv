@@ -17,7 +17,7 @@ import java.util.UUID;
 
 @Slf4j
 @RestController
-@RequestMapping("/group")
+@RequestMapping("api/v1/group")
 public class GroupController {
     @Autowired
     GiraGroupService giraGroupService;

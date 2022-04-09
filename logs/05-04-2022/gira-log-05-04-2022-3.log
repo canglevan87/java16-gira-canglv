@@ -1,0 +1,52 @@
+21:50:27 [background-preinit] INFO    --- o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.2.Final
+21:50:27 [restartedMain] INFO    --- c.j.j.Java16GiraCanglvApplication - Starting Java16GiraCanglvApplication using Java 17.0.2 on DESKTOP-L093AVC with PID 4996 (D:\JAVA BACK END CYBERSOFT\Springboot\demo\java16-gira-canglv\target\classes started by cangvanle in D:\JAVA BACK END CYBERSOFT\Springboot\demo\java16-gira-canglv)
+21:50:27 [restartedMain] INFO    --- c.j.j.Java16GiraCanglvApplication - No active profile set, falling back to 1 default profile: "default"
+21:50:27 [restartedMain] INFO    --- o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:50:27 [restartedMain] INFO    --- o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+21:50:28 [restartedMain] INFO    --- o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:50:28 [restartedMain] INFO    --- o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+21:50:29 [restartedMain] INFO    --- o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:50:29 [restartedMain] INFO    --- o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:50:29 [restartedMain] INFO    --- o.a.c.c.StandardService - Starting service [Tomcat]
+21:50:29 [restartedMain] INFO    --- o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+21:50:29 [restartedMain] INFO    --- o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+21:50:29 [restartedMain] INFO    --- o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2048 ms
+21:50:30 [restartedMain] INFO    --- c.z.h.HikariDataSource - HikariPool-1 - Starting...
+21:50:30 [restartedMain] INFO    --- c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+21:50:30 [restartedMain] INFO    --- o.f.c.i.l.VersionPrinter - Flyway Community Edition 8.5.2 by Redgate
+21:50:30 [restartedMain] INFO    --- o.f.c.i.l.VersionPrinter - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.2
+21:50:30 [restartedMain] INFO    --- o.f.c.i.l.VersionPrinter - 
+21:50:30 [restartedMain] INFO    --- o.f.c.i.d.b.BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/gira (PostgreSQL 14.2)
+21:50:30 [restartedMain] INFO    --- o.f.c.i.c.DbValidate - Successfully validated 2 migrations (execution time 00:00.025s)
+21:50:30 [restartedMain] INFO    --- o.f.c.i.c.DbMigrate - Current version of schema "public": 3
+21:50:30 [restartedMain] INFO    --- o.f.c.i.c.DbMigrate - Schema "public" is up to date. No migration necessary.
+21:50:30 [restartedMain] INFO    --- o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:50:30 [restartedMain] INFO    --- o.h.Version - HHH000412: Hibernate ORM core version 5.4.33
+21:50:30 [restartedMain] INFO    --- o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:50:30 [restartedMain] INFO    --- o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:50:31 [restartedMain] INFO    --- o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:50:31 [restartedMain] INFO    --- o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:50:31 [restartedMain] WARN    --- o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:50:31 [restartedMain] WARN    --- o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsImpl' defined in file [D:\JAVA BACK END CYBERSOFT\Springboot\demo\java16-gira-canglv\target\classes\cybersoft\javabackend\java16giracanglv\security\dto\UserDetailsImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+21:50:31 [restartedMain] INFO    --- o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:50:31 [restartedMain] INFO    --- c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:50:31 [restartedMain] INFO    --- c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:50:31 [restartedMain] INFO    --- o.a.c.c.StandardService - Stopping service [Tomcat]
+21:50:31 [restartedMain] INFO    --- o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+21:50:31 [restartedMain] ERROR   --- o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in cybersoft.javabackend.java16giracanglv.security.dto.UserDetailsImpl required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
