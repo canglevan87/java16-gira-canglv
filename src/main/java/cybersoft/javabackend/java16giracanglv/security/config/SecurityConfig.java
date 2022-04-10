@@ -48,7 +48,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         //JWT FILTER
-            http.antMatcher("/api/**").authorizeRequests().anyRequest().authenticated();
+            http.antMatcher("/api/v1/**").authorizeRequests()
+                    .antMatchers("/api/v1/auth/login").permitAll()
+                    .antMatchers("/api/v1/user/**").permitAll()
+                    .anyRequest().authenticated();
 
         //API AUTHENTICATION
     }
