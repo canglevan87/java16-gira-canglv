@@ -7,7 +7,7 @@ spring:
       name: admin
       password: 1234
   datasource:
-    url: jdbc:postgresql://localhost:5432/gira
+    url: jdbc:postgresql://localhost:5432/gira-lap
     username: postgres
     password: admin
   jpa:

@@ -1,6 +1,7 @@
 package cybersoft.javabackend.java16giracanglv.security.config;
 
 
+import cybersoft.javabackend.java16giracanglv.security.jwt.JwtAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,8 @@ import java.net.PasswordAuthentication;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
+    @Autowired
+    private JwtAuthorizationFilter jwtAuthorizationFilter;
     @Bean
     public PasswordEncoder getPasswordEncoder()  {
         return new BCryptPasswordEncoder();
@@ -48,11 +51,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         //JWT FILTER
-            http.antMatcher("/api/v1/**").authorizeRequests()
-                    .antMatchers("/api/v1/auth/login").permitAll()
-                    .antMatchers("/api/v1/user/**").permitAll()
-                    .anyRequest().authenticated();
+        http.addFilterBefore(jwtAuthorizationFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class);
 
         //API AUTHENTICATION
+        http.antMatcher("/api/v1/**").authorizeRequests()
+                .antMatchers("/api/v1/auth/login").permitAll()
+                .antMatchers("/api/v1/user/**").permitAll()
+                .anyRequest().authenticated();
     }
 }

@@ -4,11 +4,13 @@ import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 @Slf4j
 @Component
 public class JwtHelper {
     private String key = "secretkey";
+    String prefix = "Bearer ";
 
     public String generateJwtToken(String username) {
         Date currentDate = new Date();
@@ -46,4 +48,18 @@ public class JwtHelper {
         return false;
 
     }
+    public String getUserNameFromJwtToken(String jwtToken) {
+
+
+        Claims claims = Jwts.parser().setSigningKey(key).parseClaimsJws(jwtToken).getBody();
+        return claims.getSubject();
+    }
+    public String getJwtTokenFromHeader(HttpServletRequest request) {
+        String jwt = request.getHeader("Authorization");
+        if (jwt == null) {
+            return jwt;
+        }
+        return jwt.replace(prefix, "");
+    }
+
 }
